@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+/*--- PRIMARY COLOR ---*/
+--pri-col: hsla(25, 97%, 53%);
+
+/*--- NEUTRAL COLORS ---*/
+--neut-white: hsla(0, 0%, 100%);
+--neut-lt-grey: hsl(217, 12%, 63%);
+--neut-md-grey: hsl(216, 12%, 54%);
+--neut-dk-blue: hsl(213, 19%, 18%);
+--neut-dk-blue-var: hsl(213, 19%, 24%);
+--neut-exdk-blue: hsl(216, 12%, 8%);
+
+}
+
+/*--- GLOBAL STYLES ---*/
+html { 
+    font-size: 62.5%;
+    background-color: var(--neut-exdk-blue);  
+}
+
+body { 
+    font-family: 'Overpass', sans-serif; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    line-height: 2.2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-family: 'Overpass', sans-serif; 
+    font-weight: 700;
+    color: var(--neut-white);
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: white;
+}
+p { 
+    font-size: 1.5rem;
+    color: var(--neut-md-grey); 
+}
+
+@media screen and (max-width: 375px) {
+    h1 {font-size: 2.5rem}
+    h2 {font-size: 2.5rem}
+    p {font-size: 1.4rem}
+
+}
+
+/*--- RATING STATE ---*/
+.main-container {
+    background-color: hsla(213, 19%, 18%, 0.4);
+    width: 30vw;
+    padding: 3rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.circle {
+    background-color: var(--neut-dk-blue-var);
+    padding: 1rem;
+    margin: 0.5rem;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle img {
+    height: 11px;
+    width: 11px;
+    margin: 0.5rem;
+}
+
+.circle p {
+    font-size: 1.5rem;
+}
+.ratings {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+
+.rating:hover, .rating:hover p {
+    background-color: var(--pri-col);
+    color: whitesmoke;
+}
+
+.active, .active p {
+    background-color: var(--neut-lt-grey);
+    color: whitesmoke;
+}
+
+.submit {
+    width: 100%;
+    align-self: center;
+}
+
+.submit:hover p {
+    background-color: var(--neut-white);
+    border-radius: 20px;
+    color: var(--pri-col) !important;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.submit p {
+    color: var(--neut-white);
+    padding: 1rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    border-radius: 20px;
+    background-color: var(--pri-col);
+}
+
+@media screen and (max-width:375px) {
+    .main-container {
+        width: 90vw;
+    }
+}
+/*--- THANK YOU STATE ---*/
+.thank-you {
+    background-color: hsla(213, 19%, 18%, 0.4);
+    width: 30vw;
+    padding: 3rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    display: none;
+}
+
+.thank-you p {
+    text-align: center;
+}
+
+.selection {
+    background-color: var(--neut-dk-blue-var);
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    gap: 0.3rem;
+}
+
+.selection p {
+    color: var(--pri-col);
+}
+
+@media screen and (max-width: 375px) {
+    .thank-you {
+        width: 90vw;
+    }
+}
+
+
+/*--- ATTRIBUTION ---*/
+.attribution { 
+    margin-top: 2rem;
+    font-size: 11px; 
+    text-align: center; 
+    color: whitesmoke;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
